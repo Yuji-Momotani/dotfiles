@@ -1,0 +1,26 @@
+[core]
+	excludesfile = /Users/momotaniyuuju/.gitignore_global
+	autocrlf = false
+	editor = code --wait
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = yuji1016-momo
+	email = kilroy.was.here1016＠gmail.com
+[alias]
+	# いい感じのグラフでログを表示
+	graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+  # 上の省略形
+	gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+	st = status
+	cm = commit
+	co = checkout
+	sw = switch
+	br = branch
+	al = config --get-regexp ^alias\\.
+	pl = !git pull origin $(git rev-parse --abbrev-ref HEAD)
+	psoh = push origin HEAD
